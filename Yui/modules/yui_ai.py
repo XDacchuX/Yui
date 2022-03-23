@@ -120,7 +120,7 @@ async def help_yui(_, message: Message):
     - This is a chat bot tho. Why you need to ban someone? If it's necessary use "banable" branch and send `/ban` command (Only for Heroku Users)
 
 
-**Made with ❤️ by @NexaBotsUpdates**
+**Made with ❤️ by @TGParlimentHouse**
 """
     await message.reply(help_msg, reply_to_message_id=message.message_id)
 
