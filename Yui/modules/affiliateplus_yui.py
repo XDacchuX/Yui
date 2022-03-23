@@ -15,20 +15,20 @@ class Yui_Affiliate():
     """
     def __init__(self) -> None:
         self.data = {
-            "age": "16",
-            "birthyear": "2006",
-            "birthdate": "December 15, 2006",
+            "age": "18",
+            "birthyear": "2004",
+            "birthdate": "May 20, 2004",
             "birthplace": "Earth :)",
             "location": "New York",
-            "build": "Yui - v1.0 (Affiliate+ Engine)",
-            "version": "Yui - v1.0",
+            "build": "Kittu - v1.0 (Affiliate+ Engine)",
+            "version": "Kittu - v1.0",
             "celebrity": "Marshmello",
-            "company": "Yui",
+            "company": "Kittu",
             "email": "sorry@i-dont-have-an-email.sad",
             "kindmusic": "Future bass"
         }
-        self.bot_name = "Yui"
-        self.dev_name = "Itz-fork"
+        self.bot_name = "Kittu"
+        self.dev_name = "Darshan"
     
     async def ask_yui(self, message, user_id):
         c_message = await self.__prepare_message(message)
