@@ -31,7 +31,7 @@ class Yui_OpenAI():
     async def ask_yui(self, question, chat_log=None):
         if not chat_log:
             chat_log = defaults.Chat_Log
-        prmpt = f"{chat_log}You: {question}\nYui:"
+        prmpt = f"{chat_log}You: {question}\nKittu:"
         response = completion.create(
             prompt=prmpt, engine=self.engine, stop=["\nYou"], temperature=0.9,
             top_p=1, frequency_penalty=0, presence_penalty=0.6, best_of=1,
@@ -41,7 +41,7 @@ class Yui_OpenAI():
     async def append_and_save_chat_log(self, question, answer, user_id, chat_log=None):
         if not chat_log:
             chat_log = defaults.Chat_Log
-        chat_log = f"{chat_log}You: {question}\nYui: {answer}\n"
+        chat_log = f"{chat_log}You: {question}\nKittu: {answer}\n"
         defaults.CHAT_LOG_DB[int(user_id)] = str(chat_log)
     
     async def get_chat_log(self, user_id):
