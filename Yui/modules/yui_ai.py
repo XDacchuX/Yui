@@ -23,8 +23,8 @@ async def talk_with_yui(_, message: Message):
         quiz_text = message.text
     # For Public and private groups
     elif c_type == "supergroup" or "group":
-        # Regex to find if "yui" or "Yui" in the message text
-        if message.text and re.search(r'\bYui|yui\b', message.text):
+        # Regex to find if "Kittu" or "Kittu" in the message text
+        if message.text and re.search(r'\bKittu|Kittu\b', message.text):
             quiz_text = message.text
         # For replied message
         elif r_msg:
@@ -63,7 +63,7 @@ async def talk_with_yui(_, message: Message):
 
 
 # Set AI Engine (For OpenAI)
-@yuiai.on_message(filters.command("engine") & filters.user(Config.OWNER_ID))
+@yuiai.on_message(filters.command("Kengine") & filters.user(Config.OWNER_ID))
 async def set_yui_engine(_, message: Message):
     if len(message.command) != 2:
         engines_txt = """
@@ -107,7 +107,7 @@ To set an engine use `/engine` command followed by the engine code name you want
 
 
 # Help
-@yuiai.on_message(filters.command("help"))
+@yuiai.on_message(filters.command("kittuchat"))
 async def help_yui(_, message: Message):
     help_msg = """
 **✨ Help Section**
@@ -130,7 +130,7 @@ async def help_yui(_, message: Message):
 async def restart_yui(_, message: Message):
     if Config.ON_HEROKU:
         yui_base = Yui_Base()
-        await message.reply("`Restarting Yui, Please wait...!`")
+        await message.reply("`Restarting Kittu, Please wait...!`")
         await yui_base.restart_yui()
     else:
         await message.reply("**This command is available only for Heroku users**")
