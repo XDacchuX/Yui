@@ -1,5 +1,5 @@
 type: okteto
 deploy:
--okteto push --deploy
+- okteto push --deploy
 devs:
--okteto.yml
+- okteto.yml
