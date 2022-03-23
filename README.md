@@ -17,7 +17,7 @@ Deploying is easy 🤫! You can deploy this bot in Heroku or in a VPS ♥️! **
 #### Self-Hosting
 
 ```bash
-git clone https://github.com/Itz-fork/Yui.git
+git clone https://github.com/XdacchuX/Yui.git
 cd Yui
 pip3 install -r requirements.txt
 ```
